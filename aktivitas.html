@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aktivitas & Pengalaman | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .filter-box {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      background: white;
+      color: #8B0000;
+      border: 1px solid #8B0000;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-btn:hover {
+      background: #8B0000;
+      color: white;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .card h3 {
+      color: #8B0000;
+      margin-top: 0;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .fact-box {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .event {
+      margin: 20px auto;
+      padding: 40px 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .event-summer {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("kemarau.jpg");
+    }
+
+    .event-rainy {
+      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("hujan.jpg");
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; }
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Aktivitas & Pengalaman</h1>
+    <p>Kegiatan berdasarkan minat di Tana Toraja</p>
+  </div>
+
+  <section>
+    <h2>Minat Khusus</h2>
+    <div class="filter-box">
+      <button class="filter-btn">Petualangan</button>
+      <button class="filter-btn">Keluarga</button>
+      <button class="filter-btn">Romantis</button>
+      <button class="filter-btn">Fotografi</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Top 10 Experiences</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="sunrise.jpg" alt="Sunrise">
+        <h3>Sunrise di Lolai</h3>
+        <p>Melihat indahnya matahari terbit di negeri di atas awan.</p>
+      </div>
+      <div class="card">
+        <img src="masak.jpg" alt="Memasak">
+        <h3>Kuliner Tradisional</h3>
+        <p>Belajar memasak makanan khas Pa'piong di rumah warga.</p>
+      </div>
+      <div class="card">
+        <img src="trekking.jpg" alt="Trekking">
+        <h3>Trekking Batutumonga</h3>
+        <p>Menjelajahi sawah dan desa adat dengan berjalan kaki.</p>
+      </div>
+      <div class="card">
+        <img src="rambusolo.jpg" alt="Rambusolo">
+        <h3>Upacara Rambu Solo</h3>
+        <p>Menyaksikan ritual pemakaman adat masyarakat sekitar.</p>
+      </div>
+      <div class="card">
+        <img src="londaa.jpg" alt="Kuburan Tebing Lemo">
+        <h3>Kuburan Tebing Lemo</h3>
+        <p>Melihat makam yang dipahat di tebing dengan patung Tau-Tau.</p>
+      </div>
+      <div class="card">
+        <img src="pasar-bolu.jpg" alt="Pasar Tradisional Pasar Bolu">
+        <h3>Pasar Tradisional "Pasar Bolu"</h3>
+        <p>Pasar dengan penjualan kerbau khas Toraja, serta hewan dan jajanan lain.</p>
+      </div>
+      <div class="card">
+        <img src="bukit.jpg" alt="Bukit Ollon Valley">
+        <h3>Bukit Ollon Valley</h3>
+        <p>Padang rumput hijau, cocok untuk camping.</p>
+      </div>
+      <div class="card">
+        <img src="ketekesu.jpg" alt="Desa Adat Kete Kesu">
+        <h3>Desa Adat Kete Kesi</h3>
+        <p>Menjelajahi rumah adat Tongkonan dan ukiran khas Toraja.</p>
+      </div>
+      <div class="card">
+        <img src="sarambu.jpg" alt="Air terjun sarambu assing">
+        <h3>Air Terjun Sarambu Assing</h3>
+        <p>Air terjun tersembunyi dengan suasana alam yang menyegarkan.</p>
+      </div>
+      <div class="card">
+        <img src="ritual.jpg" alt="Ritual Ma'nene">
+        <h3>Ritual Ma'nene</h3>
+        <p>Ritual adat membersihkam dan mengganti pakaian Jenazah.</p>
+      </div>
+      </div>
+    </section>
+
+  <section>
+    <h2>Seasonal Guide</h2>
+    <div class="event event-summer">
+      <h3>Musim Kemarau (Juni - September)</h3>
+      <p>Bulan terbaik untuk menyaksikan Upacara Rambu Solo dan Trekking Gunung.</p>
+    </div>
+    <div class="event event-rainy">
+      <h3>Musim Hujan (Desember - Maret)</h3>
+      <p>Melihat air terjun yang deras dan pemandangan Toraja yang hijau.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Tana Toraja.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+  </html>
