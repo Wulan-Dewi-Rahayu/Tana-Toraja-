@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destinasi Overview | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .map-container {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      max-width: 900px; 
+      margin: 20px auto;
+      padding: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+     }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: 0;
+      border-radius: 8px;
+     }
+    
+    @media (max-width: 768px) {
+      .map-container {
+        margin: 10px;
+        padding: 5px;
+      }
+      .map-container iframe {
+        height: 300px;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .card h3 {
+      color: #8B0000;
+      margin-top: 0;
+    }
+
+    .fact-box {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th {
+      background: #8B0000;
+      color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; }
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Destinasi Overview</h1>
+    <p>Wilayah dan Jarak di Tana Toraja</p>
+  </div>
+
+  <section>
+  <h2>Peta Destinasi Interaktif</h2>
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127414.123456789!2d119.82!3d-2.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e25b64c4b69d%3A0x30303030303030!2sTana%20Toraja%20Regency%2C%20South%20Sulawesi!5e0!3m2!1sen!2sid!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+  <section>
+    <h2>Kategori Wilayah</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Utara Tropis</h3>
+        <p>Wilayah Batutumonga dan Lolai dengan pemandangan gunung dan awan.</p>
+      </div>
+      <div class="card">
+        <h3>Pusat Warisan</h3>
+        <p>Pusat budaya di Rantepao, Kete Kesu, dan situs sejarah Londa.</p>
+      </div>
+      <div class="card">
+        <h3>Pusat Kota</h3>
+        <p>Pusat kota Makale dengan ikon Patung Yesus Buntu Burake.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Informasi</h2>
+    <div class="fact-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Rute</th>
+            <th>Jarak</th>
+            <th>Waktu Tempuh</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Makale - Rantepao</td>
+            <td>12 km</td>
+            <td>30 Menit</td>
+          </tr>
+          <tr>
+            <td>Rantepao - Lolai</td>
+            <td>20 km</td>
+            <td>1 Jam</td>
+          </tr>
+          <tr>
+            <td>Makassar - Toraja</td>
+            <td>310 km</td>
+            <td>8-9 Jam</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Tana Toraja.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+</html>
