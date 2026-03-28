@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Panduan Kuliner | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 380px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      margin: 0;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .filter-box {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      background: white;
+      color: #8B0000;
+      border: 1px solid #8B0000;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .filter-btn:hover {
+      background: #8B0000;
+      color: white;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 250px;
+      padding: 20px;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .card h3 {
+      color: #8B0000;
+      margin-top: 0;
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .event {
+      margin: 20px auto;
+      padding: 40px 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .event-market {
+      background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("pasar-bolu.jpg");
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; }
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Panduan Kuliner</h1>
+    <p>Jelajahi kelezatan kuliner di Tana Toraja</p>
+  </div>
+
+  <section>
+    <h2>Direktori Restoran</h2>
+    <div class="filter-box">
+      <button class="filter-btn">Street Food</button>
+      <button class="filter-btn">Rumah Makan Lokal</button>
+      <button class="filter-btn">Cafe Kopi Toraja</button>
+      <button class="filter-btn">Fine Dining</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Must-Eat Dishes (Makanan Wajib)</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="masak.jpg" alt="Pa'piong">
+        <h3>Pa'piong</h3>
+        <p>Daging yang dimasak di dalam bambu dengan bumbu rempah dan daun miana yang gurih.</p>
+      </div>
+      <div class="card">
+        <img src="pamarrasan.jpg" alt="Pammarrasan">
+        <h3>Pammarrasan</h3>
+        <p>Masakan khas menggunakan kluwek hitam yang memberikan cita rasa kuat dan unik.</p>
+      </div>
+      <div class="card">
+        <img src="kopi-toraja.jpg" alt="Kopi Toraja">
+        <h3>Kopi Arabika Toraja</h3>
+        <p>Kopi dengan aroma rempah dan tingkat keasaman yang seimbang.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Pasar Tradisional</h2>
+    <div class="event event-market">
+      <h3>Pasar Bolu (Pasar Hewan & Kuliner)</h3>
+      <p>Pusat perdagangan kerbau, babi, serta tempat jajanan pasar tradisional Toraja.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Tana Toraja.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+  </html>
