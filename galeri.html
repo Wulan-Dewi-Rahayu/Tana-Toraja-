@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Galeri | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      position: relative;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    .gallery-container {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .gallery-title {
+      text-align: center;
+      color: #8B0000;
+      margin-bottom: 40px;
+    }
+
+    .gallery-title h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .gallery-title .underline {
+      width: 80px;
+      height: 4px;
+      background: #D4AF37;
+      margin: auto;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      height: 250px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(139, 0, 0, 0.8);
+      color: white;
+      padding: 15px;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .gallery-item:hover .overlay {
+      transform: translateY(0);
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      .hero h1 {
+        font-size: 30px;
+      }
+      .hero {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Galeri Toraja</h1>
+    <p>Abadikan keindahan bersama Toraja</p>
+  </header>
+
+  <main class="gallery-container">
+    <div class="gallery-title">
+      <h2>Dokumentasi Wisata</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="wisata1.jpg" alt="Budaya Toraja">
+        <div class="overlay">Pemandangan Tongkonan</div>
+      </div>
+      <div class="gallery-item">
+        <img src="sunrise.jpg" alt="Lolai Toraja">
+        <div class="overlay">Sunrise di Lolai</div>
+      </div>
+      <div class="gallery-item">
+        <img src="rambusolo.jpg" alt="Rambu Solo">
+        <div class="overlay">Upacara Adat Rambu Solo</div>
+      </div>
+      <div class="gallery-item">
+        <img src="ketekesu.jpg" alt="Kete Kesu">
+        <div class="overlay">Desa Kete Kesu</div>
+      </div>
+      <div class="gallery-item">
+        <img src="londa.jpg" alt="Londa">
+        <div class="overlay">Gua Londa</div>
+      </div>
+      <div class="gallery-item">
+        <img src="lolai.jpg" alt="Negeri Atas Awan">
+        <div class="overlay">Negeri di atas Awan</div>
+      </div>
+      <div class="gallery-item">
+        <img src="buntuburake.jpg" alt="Buntu Burake">
+        <div class="overlay">Patung Buntu Burake</div>
+      </div>
+      <div class="gallery-item">
+        <img src="festival.jpg" alt="Festival Toraja">
+        <div class="overlay">Festival Budaya Toraja</div>
+      </div>
+            <div class="gallery-item">
+        <img src="londaa.jpg" alt="Kuburan Tebing Lemo">
+        <div class="overlay">Kuburan Tebing Lemo</div>
+      </div>
+            <div class="gallery-item">
+        <img src="pasar-bolu.jpg" alt="Pasar Bolu Tradisional">
+        <div class="overlay">Pasar Tradisional, Pasar Bolu</div>
+      </div>
+            <div class="gallery-item">
+        <img src="bukit.jpg" alt="Bukit Ollon Valley">
+        <div class="overlay">Bukit Ollon Valley</div>
+      </div>
+            <div class="gallery-item">
+        <img src="sarambu.jpg" alt="Sarambu Assing">
+        <div class="overlay">Air terjun Sarambu Assing</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Tana Toraja.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+</html>
