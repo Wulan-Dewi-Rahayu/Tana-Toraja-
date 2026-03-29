@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pusat Bantuan & Kontak | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      padding: 25px;
+      text-align: left;
+      transition: transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #8B0000;
+      border-bottom: 2px solid #D4AF37;
+      padding-bottom: 5px;
+      margin-top: 0;
+    }
+
+    .faq-item {
+      text-align: left;
+      max-width: 800px;
+      margin: 10px auto;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 5px solid #D4AF37;
+    }
+
+    .chatbot-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #D4AF37;
+      color: #8B0000;
+      padding: 15px 25px;
+      border-radius: 50px;
+      font-weight: bold;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      nav a { display: block; margin: 10px 0; }
+      .hero h1 { font-size: 30px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Pusat bantuan & Informasi</h1>
+    <p>Kami siap membantu perjalanan Anda di Tana Toraja agar tetap aman dan nyaman.</p>
+  </header>
+
+  <section>
+    <h2>Emergency Numbers/Nomor Darurat</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Layanan Polisi</h3>
+        <p>Polres Tana Toraja: <strong>(0423) 22110</strong></p>
+        <p>Bantuan darurat keamanan di area wisata.</p>
+      </div>
+      <div class="card">
+        <h3>Ambulans & Medis</h3>
+        <p>RSUD Lakipadada: <strong>(0423) 22024</strong></p>
+        <p>Layanan gawat darurat medis 24 jam.</p>
+      </div>
+      <div class="card">
+        <h3>Layanan Turis</h3>
+        <p>Tourist Information Center: <strong>0812-XXXX-XXXX</strong></p>
+        <p>Informasi khusus panduan wisata Toraja.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #eee;">
+    <h2>Pertanyaan Umum (FAQ)</h2>
+    <div class="faq-item">
+      <strong>Apakah air keran bisa langsung diminum?</strong>
+      <p>Tidak disarankan. Sebaiknya minum air kemasan atau air yang sudah di masak.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Bagaimana kondisi cuaca di Toraja?</strong>
+      <p>Cuaca di Toraja sejuk dan sering hujan. Siapkan jaket dan payung saat berkunjung.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Apakah aman berwisata sendirian?</strong>
+      <p>Sangat aman. Namun, disarankan untuk tetap mengikuti etika lokal dan adat di sekitar tempat dan menggunakan jasa pemandu lokal jika masuk ke area sakral.</p>
+    </div>
+  </section>
+
+  <a href="https://gemini.google.com" target="_blank" class="chatbot-btn">💬 Chat with AI Guide (24/7)</a>
+
+  <footer>
+    <p>&copy; 2024 Tana Toraja.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+  </html>
