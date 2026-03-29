@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Oleh-oleh Khas | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      position: relative;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #8B0000;
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    .underline {
+      width: 70px;
+      height: 4px;
+      background: #D4AF37;
+      margin: -30px auto 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+      border: 1px solid #ddd;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    .info h3 {
+      font-size: 19px;
+      color: #8B0000;
+      margin: 0 0 10px 0;
+    }
+
+    .info p {
+      font-size: 14px;
+      color: #555;
+      height: 60px;
+      overflow: hidden;
+    }
+
+    .btn-detail {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 25px;
+      background: #8B0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .btn-detail:hover {
+      background: #D4AF37;
+      color: #8B0000;
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 30px; }
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Oleh-oleh khas Toraja</h1>
+    <p>Bawa pulang kehangatan dari Toraja</p>
+  </header>
+
+  <section>
+    <h2>Oleh-oleh Khas Terbaik Toraja</h2>
+    <div class="underline"></div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="kopi.jpg" alt="Kopi Toraja">
+        <div class="info">
+          <h3>Kopi Toraja</h3>
+          <p>Kopi Arabika dengan aroma rempah yang unik dan kuat.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="kacang.jpg" alt="Kacang Sembunyi">
+        <div class="info">
+          <h3>Kacang Sembunyi</h3>
+          <p>Camilan renyah dengan karamel manis.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="deppa.jpg" alt="Deppa Tori">
+        <div class="info">
+          <h3>Deppa Tori'</h3>
+          <p>Kue tradisional wijen khas Toraja yang manis dan legit.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="masak.jpg" alt="Pa'Piong">
+        <div class="info">
+          <h3>Pa'Piong</h3>
+          <p>Daging yang dimasak di dalam bambu dengan bumbu rempah dan daun miana yang gurih.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="miniatur.jpg" alt="Miniatur Tongkonan">
+        <div class="info">
+          <h3>Miniatur Tongkonan</h3>
+          <p>Hiasan dekoratif kayu yang diukir tangan menyerupai rumah adat asli.</p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="tenun.jpg" alt="Kain Tenun Toraja">
+        <div class="info">
+          <h3>Kain Tenun Toraja</h3>
+          <p>Kain tenun tradisional dengan motif khas dan beragam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Tana Toraja Wisata.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+  </html>
