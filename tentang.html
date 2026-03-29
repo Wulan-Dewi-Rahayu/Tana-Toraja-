@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tentang Web | Tana Toraja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #F8F8F8;
+      color: #222222;
+      line-height: 1.6;
+    }
+
+    nav {
+      background: #8B0000;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      color: #D4AF37;
+    }
+
+    .hero {
+      position: relative;
+      height: 550px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("toraja.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 0;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .card-about {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      border-left: 8px solid #8B0000;
+    }
+
+    h2 {
+      color: #8B0000;
+      border-bottom: 2px solid #D4AF37;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .web-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .feature-item {
+      background: #fff9f9;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #eee;
+    }
+
+    .feature-item h4 {
+      margin: 0 0 10px 0;
+      color: #8B0000;
+    }
+
+    .tech-stack {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      background: #8B0000;
+      color: white;
+      border-radius: 15px;
+    }
+
+    .tech-icons {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #D4AF37;
+    }
+
+    footer {
+      background: #111111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 30px; }
+      nav a { display: block; margin: 10px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="destinasi.html">Destinasi</a>
+    <a href="aktivitas.html">Aktivitas</a>
+    <a href="budaya.html">Budaya</a>
+    <a href="kuliner.html">Kuliner</a>
+    <a href="rencana.html">Rencana Trip</a>
+    <a href="itinerary.html">Itinerary</a>
+    <a href="penginapan.html">Penginapan</a>
+    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
+    <a href="info.html">Info Wisata</a>
+    <a href="booking.html">Booking</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="oleh-oleh.html">Oleh-oleh</a>
+    <a href="tentang.html">Tentang</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Tentang Website Ini</h1>
+    <p>Informasi Website Pariwisata Tana Toraja</p>
+  </header>
+
+  <div class="content-container">
+    <div class="card-about">
+      <h2>Tujuan Proyek</h2>
+      <p>
+        Website <strong>Tana Toraja</strong> adalah proyek website yang dikembangkan agar dapat mempermudah wisatawan dalam mengeksplorasi keindahan alam dan budaya di Sulawesi Selatan.</p>
+
+      <h2>Fitur Utama</h2>
+      <div class="web-features">
+        <div class="feature-item">
+          <h4>14 Halaman Informasi</h4>
+          <p>Memiliki 14 halaman informasi yang saling terhubung untuk panduan wisata lengkap.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Formulir Pemesanan</h4>
+          <p>Wisatawan dapat menginput data pribadi dan rencana perjalanan dengan nyaman.</p>
+        </div>
+        <div class="feature-item">
+          <h4>Galeri Toraja</h4>
+          <p>Menampilkan keindahan Tana Toraja, dari adat istiadat, tempat dan lain-lain.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Tana Toraja Wisata.</p>
+    <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
+  </footer>
+
+</body>
+</html>
