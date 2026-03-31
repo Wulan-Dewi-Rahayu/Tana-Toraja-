@@ -57,28 +57,37 @@
       text-align: center;
     }
 
-    .filter-box {
+    .table-container {
+      max-width: 1100px;
       margin: 20px auto;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .filter-btn {
-      padding: 10px 20px;
+      overflow-x: auto;
       background: white;
-      color: #8B0000;
-      border: 1px solid #8B0000;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
-    .filter-btn:hover {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 800px;
+    }
+
+    th {
       background: #8B0000;
       color: white;
+      padding: 12px;
+    }
+
+    td {
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    tr:hover {
+      background: #fdf5f5;
     }
 
     .cards {
@@ -92,10 +101,14 @@
       background: white;
       border: 1px solid #ddd;
       border-radius: 10px;
-      width: 250px;
+      width: 280px;
       padding: 20px;
       text-align: left;
       transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
     }
 
     .card h3 {
@@ -105,7 +118,7 @@
 
     .card img {
       width: 100%;
-      height: 150px;
+      height: 180px;
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 10px;
@@ -166,16 +179,72 @@
 
   <section>
     <h2>Direktori Restoran</h2>
-    <div class="filter-box">
-      <button class="filter-btn">Street Food</button>
-      <button class="filter-btn">Rumah Makan Lokal</button>
-      <button class="filter-btn">Cafe Kopi Toraja</button>
-      <button class="filter-btn">Fine Dining</button>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Kategori</th>
+            <th>Rekomendasi Tempat</th>
+            <th>Kisaran Harga</th>
+            <th>Jenis Makanan</th>
+            <th>Lokasi</th>
+            <th>Rating</th>
+            <th>Fasilitas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pedagang Kaki Lima</strong></td>
+            <td>Bakso Lapangan Bakti</td>
+            <td>Rp 10rb - 25rb</td>
+            <td>Nasional</td>
+            <td>Rantepao</td>
+            <td>4.2/5</td>
+            <td>Area Terbuka</td>
+          </tr>
+          <tr>
+            <td><strong>Rumah Makan Lokal</strong></td>
+            <td>RM. Rimiko / RM. Mambo</td>
+            <td>Rp 30rb - 80rb</td>
+            <td>Tradisional Toraja</td>
+            <td>Jl. Andi Mappanyukki</td>
+            <td>4.1/5</td>
+            <td>Parkir, Toilet</td>
+          </tr>
+          <tr>
+            <td><strong>Cafe & Bistro</strong></td>
+            <td>Kaana Toraja Coffee</td>
+            <td>Rp 40rb - 100rb</td>
+            <td>Nasional & Western</td>
+            <td>Pusat Rantepao</td>
+            <td>4.8/5</td>
+            <td>WiFi, AC, Musik</td>
+          </tr>
+          <tr>
+            <td><strong>Restoran Hotel</strong></td>
+            <td>Toraja Heritage Resto</td>
+            <td>Rp 150rb - 300rb</td>
+            <td>Internasional</td>
+            <td>Karassik</td>
+            <td>4.1/5</td>
+            <td>View Alam, Lounge</td>
+          </tr>
+          <tr>
+            <td><strong>Fine Dining</strong></td>
+            <td>Sahid Toraja Dining</td>
+            <td>> Rp 500rb</td>
+            <td>Gourmet Menu</td>
+            <td>Mengkendek</td>
+            <td>4.3/5</td>
+            <td>VVIP Service, Wine</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
   <section>
-    <h2>Must-Eat Dishes (Makanan Wajib)</h2>
+    <h2>Makanan Wajib</h2>
     <div class="cards">
       <div class="card">
         <img src="masak.jpg" alt="Pa'piong">
@@ -188,9 +257,24 @@
         <p>Masakan khas menggunakan kluwek hitam yang memberikan cita rasa kuat dan unik.</p>
       </div>
       <div class="card">
-        <img src="kopi-toraja.jpg" alt="Kopi Toraja">
+        <img src="kopi.jpg" alt="Kopi Toraja">
         <h3>Kopi Arabika Toraja</h3>
-        <p>Kopi dengan aroma rempah dan tingkat keasaman yang seimbang.</p>
+        <p>Kopi dengan aroma rempah khas pegunungan dan tingkat keasaman yang seimbang.</p>
+      </div>
+      <div class="card">
+        <img src="ballo.jpg" alt="Tuak Ballo">
+        <h3>Tuak Ballo</h3>
+        <p>Minuman tradisional dari nira pohon aren khas masyarakat Toraja.</p>
+      </div>
+      <div class="card">
+        <img src="deppa.jpg" alt="Deppa Tori">
+        <h3>Deppa-Tori</h3>
+        <p>Kue manis tradisional berbahan dasar tepung beras dan gula merah dengan taburan wijen.</p>
+      </div>
+      <div class="card">
+        <img src="kapurung.jpg" alt="Kapurung">
+        <h3>Kapurung</h3>
+        <p>Sup sagu dengan sayuran, ikan atau ayam, dan bumbu asam pedas.</p>
       </div>
     </div>
   </section>
@@ -199,7 +283,7 @@
     <h2>Pasar Tradisional</h2>
     <div class="event event-market">
       <h3>Pasar Bolu (Pasar Hewan & Kuliner)</h3>
-      <p>Pusat perdagangan kerbau, babi, serta tempat jajanan pasar tradisional Toraja.</p>
+      <p>Pusat perdagangan kerbau, babi, serta tempat berburu jajanan pasar tradisional Toraja.</p>
     </div>
   </section>
 
@@ -209,4 +293,4 @@
   </footer>
 
 </body>
-  </html>
+</html>
