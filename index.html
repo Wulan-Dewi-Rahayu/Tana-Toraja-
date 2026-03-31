@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -42,9 +42,9 @@
       align-items: center;
       color: white;
       text-align: center;
-      overflow: hidden; 
+      overflow: hidden;
     }
-      
+
     .hero-video {
       position: absolute;
       top: 50%;
@@ -80,15 +80,16 @@
       gap: 15px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       width: 90%;
-      max-width: 900px;
+      max-width: 600px;
     }
 
-    .search-box select, .search-box input {
+    .search-box select {
       padding: 12px 20px;
       border: 1px solid #ccc;
       border-radius: 30px;
       outline: none;
       font-size: 14px;
+      min-width: 250px;
     }
 
     .search-box button {
@@ -125,11 +126,7 @@
       border-radius: 10px;
       width: 230px;
       padding: 15px;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      transition: transform 0.3s, border 0.3s;
     }
 
     .card img {
@@ -139,43 +136,71 @@
       border-radius: 10px;
     }
 
-    .event {
-      margin: 20px auto;
-      padding: 50px 20px;
-      border-radius: 15px;
-      max-width: 800px;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+    .instagram-feed {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .event h3 {
-      font-size: 28px;
-      margin-top: 0;
+    .insta-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .event-rambu {
-      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("rambusolo.jpg");
-    }
-
-    .event-festival {
-      background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("festival.jpg");
-    }
-      
-    .social {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-    }
-
-    .social img {
-      width: 250px;
-      height: 200px;
+    .insta-item img {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      border-radius: 10px;
+      transition: transform 0.5s;
+    }
+
+    .insta-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.3s;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .insta-item:hover .insta-overlay {
+      opacity: 1;
+    }
+
+    .insta-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .insta-overlay p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .insta-overlay .stats {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .insta-overlay .hashtag {
+      color: #D4AF37;
+      font-size: 12px;
+      margin-top: 10px;
     }
 
     footer {
@@ -187,17 +212,11 @@
     }
 
     @media (max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .hero h1 {
-        font-size: 30px;
-      }
+      nav a { display: block; margin: 10px 0; }
+      .instagram-feed { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
 
   <nav>
@@ -221,44 +240,39 @@
     <video autoplay muted loop playsinline class="hero-video">
       <source src="video-toraja.mp4" type="video/mp4">
     </video>
-
     <h1>Jelajahi Tana Toraja</h1>
     <p>Keindahan Alam dan Budaya Sulawesi Selatan</p>
-
     <div class="search-box">
-      <select>
-        <option value="">Pilih Kategori</option>
-        <option value="budaya">Budaya</option>
-        <option value="alam">Alam (Pantai/Gunung)</option>
-        <option value="kuliner">Kuliner</option>
-        <option value="petualangan">Petualangan</option>
+      <select id="minat-khusus">
+        <option value="">Pilih Minat Khusus</option>
+        <option value="kete-kesu">Kete Kesu</option>
+        <option value="lolai">Lolai</option>
+        <option value="londa">Londa</option>
+        <option value="buntu-burake">Buntu Burake</option>
       </select>
-      
-      <input type="date" title="Tanggal Rencana Kunjungan">
-      
-      <button type="submit">Cari Tujuan</button>
+      <button type="button" onclick="cariTujuan()">Cari Tujuan</button>
     </div>
   </header>
 
   <section>
     <h2>Destinasi Populer</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" id="kete-kesu">
         <img src="ketekesu.jpg" alt="Kete Kesu">
         <h3>Kete Kesu</h3>
         <p>Desa adat dengan rumah Tongkonan dan kuburan batu.</p>
       </div>
-      <div class="card">
+      <div class="card" id="lolai">
         <img src="lolai.jpg" alt="Lolai">
         <h3>Lolai</h3>
         <p>Dikenal sebagai negeri di atas awan.</p>
       </div>
-      <div class="card">
+      <div class="card" id="londa">
         <img src="londa.jpg" alt="Londa">
         <h3>Londa</h3>
         <p>Goa pemakaman tradisional Toraja.</p>
       </div>
-      <div class="card">
+      <div class="card" id="buntu-burake">
         <img src="buntuburake.jpg" alt="Buntu Burake">
         <h3>Buntu Burake</h3>
         <p>Patung Yesus dengan pemandangan indah.</p>
@@ -266,24 +280,38 @@
     </div>
   </section>
 
-  <section>
-    <h2>Event Budaya</h2>
-    <div class="event event-rambu">
-      <h3>Upacara Rambu Solo</h3>
-      <p>Upacara pemakaman adat yang sangat terkenal di Tana Toraja.</p>
-    </div>
-    <div class="event event-festival">
-      <h3>Festival Budaya Toraja</h3>
-      <p>Festival yang menampilkan tarian, musik, dan tradisi Toraja.</p>
-    </div>
-  </section>
+  <section style="background: #fff;">
+    <h2>#ExploreToraja on Instagram</h2>
+    <p>Momen nyata para penjelajah Tana Toraja</p>
+    <div class="instagram-feed">
+      
+      <div class="insta-item">
+        <img src="instagram1.jpg" alt="Landscape Toraja">
+        <div class="insta-overlay">
+          <p class="stats">❤️ 454 | 💬 37</p>
+          <p>"Keindahan dari tanah para raja."</p>
+          <p class="hashtag">#Toraja #SouthSulawesi #WonderfulIndonesia</p>
+        </div>
+      </div>
 
-  <section>
-    <h2>Momen Wisatawan</h2>
-    <div class="social">
-      <img src="wisata1.jpg" alt="Wisatawan 1">
-      <img src="wisata2.jpg" alt="Wisatawan 2">
-      <img src="wisata3.jpg" alt="Wisatawan 3">
+      <div class="insta-item">
+        <img src="instagram2.jpg" alt="Toraja Culture">
+        <div class="insta-overlay">
+          <p class="stats">❤️ 79 | 💬 16</p>
+          <p>"Melihat kota di atas awan."</p>
+          <p class="hashtag">#Visittoraja #Visitsulawesiselatan</p>
+        </div>
+      </div>
+
+      <div class="insta-item">
+        <img src="instagram3.jpg" alt="Toraja Trip">
+        <div class="insta-overlay">
+          <p class="stats">❤️ 166 | 💬 0</p>
+          <p>"Setiap sudut Toraja punya cerita tersendiri."</p>
+          <p class="hashtag">#TravelGram #InstaTravel #Sulawesi</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -292,5 +320,25 @@
     <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
   </footer>
 
+  <script>
+    function cariTujuan() {
+      const pilihan = document.getElementById('minat-khusus').value;
+      if (pilihan === "") {
+        alert("Silakan pilih minat khusus terlebih dahulu!");
+        return;
+      }
+      const targetElement = document.getElementById(pilihan);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        targetElement.style.border = "2px solid #D4AF37";
+        targetElement.style.transform = "scale(1.05)";
+        setTimeout(() => {
+          targetElement.style.border = "1px solid #ddd";
+          targetElement.style.transform = "scale(1)";
+        }, 2000);
+      }
+    }
+  </script>
+
 </body>
-</html>
+          </html>
