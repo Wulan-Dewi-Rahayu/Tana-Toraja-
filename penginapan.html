@@ -7,11 +7,6 @@
   <title>Akomodasi | Tana Toraja</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-  
-    html { 
-      scroll-behavior: smooth;
-    }
-  
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -79,6 +74,8 @@
       font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .filter-btn:hover {
@@ -105,11 +102,7 @@
       width: 280px;
       padding: 15px;
       text-align: left;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
+      transition: transform 0.3s, border 0.3s;
     }
 
     .card img {
@@ -146,7 +139,7 @@
     @media (max-width: 768px) {
       nav a { display: block; margin: 10px 0; }
       .hero h1 { font-size: 30px; }
-      .filter-box { flex-direction: column; border-radius: 20px; }
+      .filter-box { flex-direction: column; border-radius: 20px; padding: 15px; }
     }
   </style>
 </head>
@@ -174,13 +167,13 @@
     <p>Rekomendasi tempat istirahat dengan kenyamanan terbaik.</p>
     
     <div class="filter-box">
-  <a href="#eco-stay" class="filter-btn" style="text-decoration: none;">Eco-Friendly Stay</a>
-  <a href="#staycation" class="filter-btn" style="text-decoration: none;">Staycation Idea</a>
-  <a href="#homestay" class="filter-btn" style="text-decoration: none;">Homestay Agrowisata</a>
-</div>
+      <button class="filter-btn" onclick="scrollToId('eco-stay')">Eco-Friendly Stay</button>
+      <button class="filter-btn" onclick="scrollToId('staycation')">Staycation Idea</button>
+      <button class="filter-btn" onclick="scrollToId('homestay')">Homestay Agrowisata</button>
+    </div>
   </header>
 
- <section>
+  <section>
     <h2>Jenis Penginapan</h2>
     <div class="cards">
       
@@ -209,12 +202,33 @@
       </div>
 
     </div>
-</section>
+  </section>
 
   <footer>
     <p>&copy; 2024 Tana Toraja.</p>
     <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
   </footer>
+
+  <script>
+    function scrollToId(id) {
+      const targetElement = document.getElementById(id);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+
+        targetElement.style.border = "2px solid #D4AF37";
+        targetElement.style.transform = "scale(1.05)";
+        
+        setTimeout(() => {
+          targetElement.style.border = "1px solid #ddd";
+          targetElement.style.transform = "scale(1)";
+        }, 2000);
+      }
+    }
+  </script>
 
 </body>
 </html>
