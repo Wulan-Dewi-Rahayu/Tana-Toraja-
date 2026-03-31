@@ -63,6 +63,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
+      max-width: 1000px;
     }
 
     .filter-btn {
@@ -95,7 +96,7 @@
       width: 250px;
       padding: 20px;
       text-align: left;
-      transition: transform 0.3s;
+      transition: transform 0.3s, border 0.3s;
     }
 
     .card h3 {
@@ -109,15 +110,6 @@
       object-fit: cover;
       border-radius: 10px;
       margin-bottom: 10px;
-    }
-
-    .fact-box {
-      max-width: 800px;
-      margin: 20px auto;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
     }
 
     .event {
@@ -180,68 +172,74 @@
   <section>
     <h2>Minat Khusus</h2>
     <div class="filter-box">
-      <button class="filter-btn">Petualangan</button>
-      <button class="filter-btn">Keluarga</button>
-      <button class="filter-btn">Romantis</button>
-      <button class="filter-btn">Fotografi</button>
+      <button class="filter-btn" onclick="scrollToId('wisata-alam')">Wisata Alam</button>
+      <button class="filter-btn" onclick="scrollToId('wisata-kuliner')">Wisata Kuliner</button>
+      <button class="filter-btn" onclick="scrollToId('petualangan')">Petualangan</button>
+      <button class="filter-btn" onclick="scrollToId('religi')">Religi</button>
+      <button class="filter-btn" onclick="scrollToId('budaya')">Budaya</button>
+      <button class="filter-btn" onclick="scrollToId('wisata-belanja')">Wisata Belanja</button>
+      <button class="filter-btn" onclick="scrollToId('fotograf')">Fotografi</button>
+      <button class="filter-btn" onclick="scrollToId('sejarah')">Sejarah</button>
+      <button class="filter-btn" onclick="scrollToId('alam-petualangan')">Wisata Alam dan Petualangan</button>
+      <button class="filter-btn" onclick="scrollToId('religi-budaya')">Religi dan Budaya</button>
     </div>
   </section>
 
   <section>
     <h2>Top 10 Experiences</h2>
     <div class="cards">
-      <div class="card">
+      <div class="card" id="wisata-alam">
         <img src="sunrise.jpg" alt="Sunrise">
         <h3>Sunrise di Lolai</h3>
         <p>Melihat indahnya matahari terbit di negeri di atas awan.</p>
       </div>
-      <div class="card">
+      <div class="card" id="wisata-kuliner">
         <img src="masak.jpg" alt="Memasak">
         <h3>Kuliner Tradisional</h3>
         <p>Belajar memasak makanan khas Pa'piong di rumah warga.</p>
       </div>
-      <div class="card">
+      <div class="card" id="petualangan">
         <img src="trekking.jpg" alt="Trekking">
         <h3>Trekking Batutumonga</h3>
         <p>Menjelajahi sawah dan desa adat dengan berjalan kaki.</p>
       </div>
-      <div class="card">
+      <div class="card" id="religi">
         <img src="rambusolo.jpg" alt="Rambusolo">
         <h3>Upacara Rambu Solo</h3>
         <p>Menyaksikan ritual pemakaman adat masyarakat sekitar.</p>
       </div>
-      <div class="card">
+      <div class="card" id="budaya">
         <img src="londaa.jpg" alt="Kuburan Tebing Lemo">
         <h3>Kuburan Tebing Lemo</h3>
         <p>Melihat makam yang dipahat di tebing dengan patung Tau-Tau.</p>
       </div>
-      <div class="card">
+      <div class="card" id="wisata-kuliner">
         <img src="pasar-bolu.jpg" alt="Pasar Tradisional Pasar Bolu">
         <h3>Pasar Tradisional "Pasar Bolu"</h3>
         <p>Pasar dengan penjualan kerbau khas Toraja, serta hewan dan jajanan lain.</p>
       </div>
-      <div class="card">
+      <div class="card" id="fotografi">
         <img src="bukit.jpg" alt="Bukit Ollon Valley">
         <h3>Bukit Ollon Valley</h3>
         <p>Padang rumput hijau, cocok untuk camping.</p>
       </div>
-      <div class="card">
+      <div class="card" id="sejarah">
         <img src="ketekesu.jpg" alt="Desa Adat Kete Kesu">
-        <h3>Desa Adat Kete Kesi</h3>
+        <h3>Desa Adat Kete Kesu</h3>
         <p>Menjelajahi rumah adat Tongkonan dan ukiran khas Toraja.</p>
       </div>
-      <div class="card">
+      <div class="card" id="alam-petualangan">
         <img src="sarambu.jpg" alt="Air terjun sarambu assing">
         <h3>Air Terjun Sarambu Assing</h3>
         <p>Air terjun tersembunyi dengan suasana alam yang menyegarkan.</p>
       </div>
-      <div class="card">
+      <div class="card" id="religi-budaya">
         <img src="ritual.jpg" alt="Ritual Ma'nene">
         <h3>Ritual Ma'nene</h3>
-        <p>Ritual adat membersihkam dan mengganti pakaian Jenazah.</p>
+        <p>Ritual adat membersihkan dan mengganti pakaian Jenazah.</p>
       </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
   <section>
     <h2>Seasonal Guide</h2>
@@ -260,5 +258,26 @@
     <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
   </footer>
 
+  <script>
+    function scrollToId(id) {
+      const targetElement = document.getElementById(id);
+      
+      if (targetElement) {
+        targetElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+
+        targetElement.style.border = "2px solid #D4AF37";
+        targetElement.style.transform = "scale(1.05)";
+        
+        setTimeout(() => {
+          targetElement.style.border = "1px solid #ddd";
+          targetElement.style.transform = "scale(1)";
+        }, 2000);
+      }
+    }
+  </script>
+
 </body>
-  </html>
+        </html>
