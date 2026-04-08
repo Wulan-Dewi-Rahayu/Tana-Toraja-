@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,20 +17,56 @@
 
     nav {
       background: #8B0000;
-      padding: 15px;
-      text-align: center;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 60px;
     }
 
-    nav a {
+    .nav-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
-    nav a:hover {
+    .nav-links li a:hover {
       color: #D4AF37;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
     }
 
     .hero {
@@ -210,30 +246,75 @@
       padding: 30px 20px;
       margin-top: 20px;
     }
+    
+    @media (max-width: 992px) {
+      .hamburger {
+        display: flex;
+      }
 
-    @media (max-width: 768px) {
-      nav a { display: block; margin: 10px 0; }
-      .instagram-feed { grid-template-columns: 1fr; }
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px); 
+        background: #8B0000;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.4s;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow-y: auto; 
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-links li a {
+        font-size: 18px;
+        display: block;
+        padding: 10px 0;
+      }
+
+      .hero h1 { font-size: 32px; }
+      .instagram-feed { grid-template-columns: 1fr; padding: 0 20px; }
     }
+
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="destinasi.html">Destinasi</a>
-    <a href="aktivitas.html">Aktivitas</a>
-    <a href="budaya.html">Budaya</a>
-    <a href="kuliner.html">Kuliner</a>
-    <a href="rencana.html">Rencana Trip</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="penginapan.html">Penginapan</a>
-    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
-    <a href="info.html">Info Wisata</a>
-    <a href="booking.html">Booking</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="oleh-oleh.html">Oleh-oleh</a>
-    <a href="tentang.html">Tentang</a>
+    <a href="index.html" class="nav-logo">TANA TORAJA</a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">BERANDA</a></li>
+      <li><a href="destinasi.html">DESTINASI</a></li>
+      <li><a href="aktivitas.html">AKTIVITAS</a></li>
+      <li><a href="budaya.html">BUDAYA</a></li>
+      <li><a href="kuliner.html">KULINER</a></li>
+      <li><a href="rencana.html">RENCANA TRIP</a></li>
+      <li><a href="itinerary.html">ITINERARY</a></li>
+      <li><a href="penginapan.html">PENGINAPAN</a></li>
+      <li><a href"wisata-bertanggung.html">WISATA BERTANGGUNG</a></li>
+      <li><a href="info.html">INFORMASI</a></li>
+      <li><a href="galeri.html">GALERI</a></li>
+      <li><a href="oleh-oleh.html">OLEH-OLEH</a></li>
+      <li><a href="tentang.html">TENTANG</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 
   <header class="hero">
@@ -265,7 +346,7 @@
       <div class="card" id="lolai">
         <img src="lolai.jpg" alt="Lolai">
         <h3>Lolai</h3>
-        <p>Dikenal sebagai negeri di atas awan.</p>
+        <p>Dikenal sebagai negeri di atas awan yang sangat cantik.</p>
       </div>
       <div class="card" id="londa">
         <img src="londa.jpg" alt="Londa">
@@ -299,7 +380,7 @@
         <div class="insta-overlay">
           <p class="stats">❤️ 79 | 💬 16</p>
           <p>"Melihat kota di atas awan."</p>
-          <p class="hashtag">#Visittoraja #Visitsulawesiselatan</p>
+          <p class="hashtag">#Visittoraja #Visitsu</p>
         </div>
       </div>
 
@@ -321,6 +402,11 @@
   </footer>
 
   <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+
     function cariTujuan() {
       const pilihan = document.getElementById('minat-khusus').value;
       if (pilihan === "") {
@@ -341,4 +427,4 @@
   </script>
 
 </body>
-          </html>
+</html>
