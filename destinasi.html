@@ -17,20 +17,56 @@
 
     nav {
       background: #8B0000;
-      padding: 15px;
-      text-align: center;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 60px;
     }
 
-    nav a {
+    .nav-logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
       color: white;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-      display: inline-block;
+      font-size: 14px;
+      transition: 0.3s;
     }
 
-    nav a:hover {
+    .nav-links li a:hover {
       color: #D4AF37;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
     }
 
     .hero {
@@ -57,34 +93,36 @@
       text-align: center;
     }
 
-    .map-container {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      max-width: 900px; 
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1000px;
       margin: 20px auto;
-      padding: 10px;
-      overflow: hidden;
+    }
+    
+    .map-item {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-     }
-    
-    .map-container iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 8px;
-     }
-    
-    @media (max-width: 768px) {
-      .map-container {
-        margin: 10px;
-        padding: 5px;
-      }
-      .map-container iframe {
-        height: 300px;
-      }
+      border: 1px solid #ddd;
     }
 
+    .map-item h4 {
+      margin-top: 0;
+      color: #8B0000;
+      margin-bottom: 10px;
+    }
+
+    .map-item iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    /* --- CARDS & TABLES --- */
     .cards {
       display: flex;
       flex-wrap: wrap;
@@ -140,29 +178,72 @@
       margin-top: 20px;
     }
 
-    @media (max-width: 768px) {
-      nav a { display: block; margin: 10px 0; }
+    @media (max-width: 992px) {
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #8B0000;
+        flex-direction: column;
+        align-items: center;
+        transition: 0.4s;
+        padding-top: 20px;
+        overflow-y: auto;
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .nav-links li {
+        margin: 15px 0;
+      }
+
+      .nav-links li a {
+        font-size: 18px;
+      }
+
       .hero h1 { font-size: 30px; }
+
+      .map-grid {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="destinasi.html">Destinasi</a>
-    <a href="aktivitas.html">Aktivitas</a>
-    <a href="budaya.html">Budaya</a>
-    <a href="kuliner.html">Kuliner</a>
-    <a href="rencana.html">Rencana Trip</a>
-    <a href="itinerary.html">Itinerary</a>
-    <a href="penginapan.html">Penginapan</a>
-    <a href="wisata-bertanggung.html">Wisata Bertanggung</a>
-    <a href="info.html">Info Wisata</a>
-    <a href="booking.html">Booking</a>
-    <a href="galeri.html">Galeri</a>
-    <a href="oleh-oleh.html">Oleh-oleh</a>
-    <a href="tentang.html">Tentang</a>
+    <a href="index.html" class="nav-logo">TANA TORAJA</a>
+    
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">BERANDA</a></li>
+      <li><a href="destinasi.html">DESTINASI</a></li>
+      <li><a href="aktivitas.html">AKTIVITAS</a></li>
+      <li><a href="budaya.html">BUDAYA</a></li>
+      <li><a href="kuliner.html">KULINER</a></li>
+      <li><a href="rencana.html">RENCANA TRIP</a></li>
+      <li><a href="itinerary.html">ITINERARY</a></li>
+      <li><a href="penginapan.html">PENGINAPAN</a></li>
+      <li><a href="wisata-bertanggung.html">WISATA BERTANGGUNG</a></li>
+      <li><a href="info.html">INFORMASI</a></li>
+      <li><a href="galeri.html">GALERI</a></li>
+      <li><a href="oleh-oleh.html">OLEH-OLEH</a></li>
+      <li><a href="tentang.html">TENTANG</a></li>
+    </ul>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
 
   <div class="hero">
@@ -171,11 +252,31 @@
   </div>
 
   <section>
-  <h2>Peta Destinasi Interaktif</h2>
-  <div class="map-container">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127414.123456789!2d119.82!3d-2.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e25b64c4b69d%3A0x30303030303030!2sTana%20Toraja%20Regency%2C%20South%20Sulawesi!5e0!3m2!1sen!2sid!4v1234567890" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-</section>
+    <h2>Peta Lokasi Destinasi</h2>
+    <p>Detail lokasi setiap objek wisata populer</p>
+    
+    <div class="map-grid">
+      <div class="map-item">
+        <h4>Kete Kesu</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.365314777259!2d119.88600107361668!3d-2.9959649969800646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e9619623d5d7%3A0x6a19f939e8334860!2sKete%20Kesu&#39;!5e0!3m2!1sid!2sid!4v1712560000000!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div class="map-item">
+        <h4>Lolai (Negeri di Atas Awan)</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.565431326442!2d119.86657987361596!3d-2.9150042970613295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93ee0999999999%3A0x3565e4e840a97c4e!2sPuncak%20Lolai!5e0!3m2!1sid!2sid!4v1712560000001!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div class="map-item">
+        <h4>Londa</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.3321568249845!2d119.87354387361685!3d-3.0097746969661445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e99039304381%3A0x8670c563d4f183c5!2sLonda!5e0!3m2!1sid!2sid!4v1712560000002!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div class="map-item">
+        <h4>Buntu Burake</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.165789123456!2d119.85123456789012!3d-3.102345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d93e7f969999999%3A0x7d6a543210fedcba!2sPatung%20Yesus%20Buntu%20Burake!5e0!3m2!1sid!2sid!4v1712560000003!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
   <section>
     <h2>Kategori Wilayah</h2>
@@ -196,7 +297,7 @@
   </section>
 
   <section>
-    <h2>Informasi</h2>
+    <h2>Informasi Jarak</h2>
     <div class="fact-box">
       <table>
         <thead>
@@ -228,9 +329,16 @@
   </section>
 
   <footer>
-    <p>&copy; 2024 Tana Toraja.</p>
+    <p>© 2024 Tana Toraja.</p>
     <p>Dibuat oleh <strong>Wulan Dewi Rahayu</strong> (X-PPLG 2)</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
